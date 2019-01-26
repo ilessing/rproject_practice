@@ -31,3 +31,10 @@ another_vector <- vector(mode = 'character', length = 3)
 #another_vector <- 'slod','slid','slud'
 str(another_vector)
 
+# factors.  Demo of factors data structure
+coats <- c('tabby','black','black','grey', 'grey', 'grey')
+coats
+CATagories <- as.factor(coats)
+str(CATagories)
+levels(CATagories)
+
