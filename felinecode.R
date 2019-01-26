@@ -38,3 +38,44 @@ CATagories <- as.factor(coats)
 str(CATagories)
 levels(CATagories)
 
+cats[1]
+cats[1,1]
+cats[,1]
+cats[1,]
+
+# initiate a new variable
+age <- c(2,3,5)
+age
+cbind(cats, age)
+
+# adding age to my cats data structure
+# column bind cbind()
+cbind(cats, age)
+
+nrow(cats)
+length(age)
+newRow <- list('tortiseshell',3,3, TRUE, 9)
+cats <- rbind(cats, newRow)
+cats
+
+levels(cats$coat)
+levels(cats$coat) <- c(levels(cats$coat), 'tortiseshell')
+
+cats <- rbind(cats, list('tortiseshell',3,3, TRUE, 9))
+cats
+
+# remove row 4 and display the result
+cats[-4,]
+
+cats <- na.omit(cats)
+cats
+drop <- names(cats) %in% c("age")
+
+#rbind   
+cat <- rbind(cats,cats)
+cat
+
+rownames(cats) <- NULL
+cats
+
+
